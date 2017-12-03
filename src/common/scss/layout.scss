@@ -1,0 +1,32 @@
+// 全屏布局
+html, body, #app, .layout {
+  height: 100%;
+  overflow: hidden;
+}
+
+.layout {
+  $header-height: 60px;
+  $nav-width: 80px;
+  > header.top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: $header-height;
+    background-color: $bar-bg-color;
+  }
+  > nav.left {
+    position: absolute;
+    top: $header-height;
+    bottom: 0;
+    width: $nav-width;
+    border-right: 1px solid $border-color;
+    box-sizing: border-box;
+  }
+  > article.right {
+    position: absolute;
+    top: $header-height;
+    bottom: 0;
+    left: $nav-width;
+    right: 0;
+  }
+}
