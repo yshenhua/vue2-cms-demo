@@ -5,6 +5,10 @@
 ## 技术栈
 
 - [vue-cli](https://github.com/vuejs/vue-cli/tree/master)^2.8.2
+- [normalize.css](https://github.com/necolas/normalize.css/tree/master)^7.0.0
+- [sass-loader](https://github.com/webpack-contrib/sass-loader/tree/v6.0.6)^6.0.6
+- [sass-resources-loader](https://github.com/shakacode/sass-resources-loader/tree/v1.3.1)^1.3.1
+- [node-sass](https://github.com/sass/node-sass/tree/v4.5.3)^4.5.3
 
 ## 下载运行
 
@@ -13,7 +17,7 @@
 git clone https://github.com/yshenhua/vue2-cms-demo.git
 
 # install dependencies
-npm install
+cd vue2-cms-demo && npm install
 
 # serve with hot reload at localhost:2010
 npm run dev
