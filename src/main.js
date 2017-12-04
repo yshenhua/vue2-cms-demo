@@ -6,6 +6,11 @@ import router from './router'
 import 'normalize.css'
 import './common/scss/main.scss'
 
+import {
+  Button
+} from 'element-ui'
+Vue.use(Button)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
