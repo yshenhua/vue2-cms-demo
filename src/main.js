@@ -3,12 +3,19 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import 'normalize.css'
 import './common/scss/main.scss'
 
 import {
+  Form,
+  FormItem,
+  Input,
   Button
 } from 'element-ui'
+Vue.use(Form)
+Vue.use(FormItem)
+Vue.use(Input)
 Vue.use(Button)
 
 Vue.config.productionTip = false
@@ -17,6 +24,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
