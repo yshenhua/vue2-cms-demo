@@ -3,9 +3,11 @@ import Router from 'vue-router'
 import Layout from '@/components/Layout'
 import Login from '@/components/Login'
 
+import store from './../store'
+
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: [
     {
@@ -17,7 +19,32 @@ export default new Router({
       path: '/',
       name: '首页',
       component: Layout,
+      meta: { requiresAuth: true },
       children: []
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (!store.getters.isLogining) {
+      const isInLocal = localStorage.getItem('loginInfo') || ''
+      if (!isInLocal) {
+        next({
+          path: '/login',
+          query: { redirect: to.fullPath }
+        })
+      } else {
+        const loginInfo = JSON.parse(isInLocal)
+        store.commit('updateLoginInfo', loginInfo)
+        next()
+      }
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+})
+
+export default router
