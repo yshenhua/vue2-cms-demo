@@ -1,3 +1,16 @@
+@mixin no-list-style {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+@mixin no-user-select {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+}
+
 @mixin border-shadow {
   border-radius: 2px;
   -webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);

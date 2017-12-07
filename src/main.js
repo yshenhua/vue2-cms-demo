@@ -11,12 +11,14 @@ import {
   Form,
   FormItem,
   Input,
-  Button
+  Button,
+  Popover
 } from 'element-ui'
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Input)
 Vue.use(Button)
+Vue.use(Popover)
 
 Vue.config.productionTip = false
 

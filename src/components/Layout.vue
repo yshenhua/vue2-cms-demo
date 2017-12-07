@@ -1,13 +1,17 @@
 <template>
   <div class="layout">
-    <header class="top"></header>
+    <v-header></v-header>
     <nav class="left"></nav>
     <article class="right"></article>
   </div>
 </template>
 
 <script>
+import vHeader from './Header'
 export default {
-  name: 'layout'
+  name: 'layout',
+  components: {
+    vHeader
+  }
 }
 </script>
