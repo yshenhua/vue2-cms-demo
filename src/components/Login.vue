@@ -73,7 +73,10 @@ export default {
         font-size: 21px;
         font-weight: normal;
         text-align: center;
-        // color: $font-color;
+        color: $font-color;
+      }
+      .el-button {
+        width: 100%;
       }
     }
   }
