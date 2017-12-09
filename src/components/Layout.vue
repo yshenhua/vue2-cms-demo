@@ -2,7 +2,9 @@
   <div class="layout">
     <v-header></v-header>
     <nav class="left"></nav>
-    <article class="right"></article>
+    <article class="right">
+      <router-view/>
+    </article>
   </div>
 </template>
 

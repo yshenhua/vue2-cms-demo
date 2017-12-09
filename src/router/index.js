@@ -20,7 +20,13 @@ const router = new Router({
       name: '首页',
       component: Layout,
       meta: { requiresAuth: true },
-      children: []
+      children: [
+        {
+          path: '/form',
+          name: '表单',
+          component: relsove => require(['@/pages/form/Form'], relsove)
+        }
+      ]
     }
   ]
 })

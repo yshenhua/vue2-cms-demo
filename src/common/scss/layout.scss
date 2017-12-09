@@ -28,5 +28,17 @@ html, body, #app, .layout {
     bottom: 0;
     left: $nav-width;
     right: 0;
+    overflow: auto;
+    // 内容部分样式
+    > section {
+      padding: 0 25px;
+      .demo-block {
+        max-width: 980px;
+        min-width: 600px;
+        padding: 20px;
+        border: 1px solid $border-color;
+        @include border-shadow;
+      }
+    }
   }
 }
