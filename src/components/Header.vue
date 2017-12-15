@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: 'header',
+  name: 'vHeader',
   methods: {
     signOut () {
       // console.log('注销')

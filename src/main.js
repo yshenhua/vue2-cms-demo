@@ -21,6 +21,7 @@ import {
   DatePicker,
   TimePicker,
   Popover,
+  Tooltip,
   MessageBox
 } from 'element-ui'
 Vue.use(Form)
@@ -36,6 +37,7 @@ Vue.use(Button)
 Vue.use(DatePicker)
 Vue.use(TimePicker)
 Vue.use(Popover)
+Vue.use(Tooltip)
 Vue.prototype.$msgbox = MessageBox
 
 Vue.config.productionTip = false
