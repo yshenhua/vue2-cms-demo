@@ -25,6 +25,11 @@ const router = new Router({
           path: '/form',
           name: '表单',
           component: relsove => require(['@/pages/form/Form'], relsove)
+        },
+        {
+          path: '/editor',
+          name: '富文本编辑器',
+          component: relsove => require(['@/pages/editor/Editor'], relsove)
         }
       ]
     }

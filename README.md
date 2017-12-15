@@ -11,6 +11,7 @@
 - [node-sass](https://github.com/sass/node-sass/tree/v4.5.3)^4.5.3
 - [normalize.css](https://github.com/necolas/normalize.css/tree/master)^7.0.0
 - [element-ui](https://github.com/ElemeFE/element/tree/v2.0.7)^2.0.7
+- [vue-html5-editor](https://github.com/PeakTai/vue-html5-editor/tree/v1.1.1)^1.1.1
 
 ## 下载运行
 

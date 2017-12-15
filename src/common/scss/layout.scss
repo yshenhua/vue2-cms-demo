@@ -31,10 +31,10 @@ html, body, #app, .layout {
     overflow: auto;
     // 内容部分样式
     > section {
-      padding: 0 25px;
+      min-width: 1020px;
+      padding: 0 25px 25px;
       .demo-block {
-        max-width: 980px;
-        min-width: 600px;
+        max-width: 100%;
         padding: 20px;
         border: 1px solid $border-color;
         @include border-shadow;

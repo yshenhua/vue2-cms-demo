@@ -2,7 +2,7 @@
   <nav class="left">
     <ul class="nav">
       <li v-for="(item, index) in navItems" :key="index">
-        <router-link :to="{ path: '/form' }">
+        <router-link :to="{ path: item.url }">
           <el-tooltip effect="dark" :content="item.label" placement="right">
             <i class="iconfont" :class="item.icon"></i>
           </el-tooltip>
@@ -27,6 +27,11 @@ export default {
           icon: 'icon-form',
           label: '表单',
           url: '/form'
+        },
+        {
+          icon: 'icon-textbox',
+          label: '富文本编辑器',
+          url: '/editor'
         }
       ]
     }

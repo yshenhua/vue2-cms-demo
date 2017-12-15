@@ -1,0 +1,41 @@
+.vue-html5-editor {
+  > .toolbar {
+    > ul {
+      padding: 0 5px !important;
+      > li {
+        padding: 0 !important;
+        .icon {
+          width: 36px !important;
+          vertical-align: initial !important;
+        }
+      }
+    }
+    > .dashboard {
+      .el-upload--picture-card {  // upload
+        width: 100px;
+        height: 100px;
+        line-height: 110px;
+        border-radius: 2px;
+      }
+      .el-upload-list--picture-card { // list
+        .el-upload-list__item {
+          width: 100px;
+          height: 100px;
+          border-radius: 2px;
+          .el-progress--circle {
+            width: 98px;
+            .el-progress-circle {
+              width: 98px !important;
+              height: 98px !important;
+            }
+          }
+        }
+      }
+      .el-upload__tip { // tip
+        .custom-tip {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
