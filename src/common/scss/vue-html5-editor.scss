@@ -11,29 +11,12 @@
       }
     }
     > .dashboard {
-      .el-upload--picture-card {  // upload
-        width: 100px;
-        height: 100px;
-        line-height: 110px;
-        border-radius: 2px;
-      }
-      .el-upload-list--picture-card { // list
-        .el-upload-list__item {
-          width: 100px;
-          height: 100px;
-          border-radius: 2px;
-          .el-progress--circle {
-            width: 98px;
-            .el-progress-circle {
-              width: 98px !important;
-              height: 98px !important;
-            }
-          }
-        }
-      }
-      .el-upload__tip { // tip
-        .custom-tip {
-          margin-left: 10px;
+      ul.emoticon-list {
+        @include no-list-style;
+        > li {
+          float: left;
+          padding: 5px;
+          cursor: pointer;
         }
       }
     }

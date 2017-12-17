@@ -1,7 +1,8 @@
 <template>
   <section>
     <h3>Vue-html5-editor 富文本编辑器</h3>
-    <p></p>
+    <p>Vue-html5-editor是一个比较简洁的富文本编辑器插件，同时也支持自定义扩展模块（下面的表情模块就是自定义扩展的）。</p>
+    <p><a href="https://github.com/PeakTai/vue-html5-editor">插件地址：https://github.com/PeakTai/vue-html5-editor</a></p>
     <div class="demo-block">
       <vue-html5-editor
         :height="400"

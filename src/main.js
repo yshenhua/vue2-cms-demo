@@ -197,13 +197,37 @@ const options = {
       // },
       dashboard: {
         template: `
-          <div>自定义模板</div>
+        <ul class="emoticon-list">
+          <li v-for="(item, index) in emoticons" :key="index"
+            @click="addTo(item)">
+            <img :title="item.title" :src="item.src">
+          </li>
+        </ul>
         `,
         data () {
           return {
+            emoticons: [
+              { title: '大笑', src: 'http://img.baidu.com/hi/jx2/j_0015.gif' },
+              { title: '流汗', src: 'http://img.baidu.com/hi/jx2/j_0016.gif' },
+              { title: '惊讶', src: 'http://img.baidu.com/hi/jx2/j_0017.gif' },
+              { title: '臭美', src: 'http://img.baidu.com/hi/jx2/j_0018.gif' },
+              { title: '傻笑', src: 'http://img.baidu.com/hi/jx2/j_0019.gif' },
+              { title: '抛媚眼', src: 'http://img.baidu.com/hi/jx2/j_0020.gif' },
+              { title: '发怒', src: 'http://img.baidu.com/hi/jx2/j_0021.gif' },
+              { title: '打酱油', src: 'http://img.baidu.com/hi/jx2/j_0022.gif' },
+              { title: '俯卧撑', src: 'http://img.baidu.com/hi/jx2/j_0023.gif' },
+              { title: '气愤', src: 'http://img.baidu.com/hi/jx2/j_0024.gif' },
+              { title: '？', src: 'http://img.baidu.com/hi/jx2/j_0025.gif' },
+              { title: '吻', src: 'http://img.baidu.com/hi/jx2/j_0026.gif' },
+              { title: '怒', src: 'http://img.baidu.com/hi/jx2/j_0027.gif' },
+              { title: '胜利', src: 'http://img.baidu.com/hi/jx2/j_0028.gif' }
+            ]
           }
         },
         methods: {
+          addTo (img) {
+            this.$parent.execCommand('insertHTML', '<img src="' + img.src + '" title="' + img.title + '">')
+          }
         }
       }
     }
