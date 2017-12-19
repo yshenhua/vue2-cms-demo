@@ -15,6 +15,8 @@ import {
   TimePicker,
   Popover,
   Tooltip,
+  Breadcrumb,
+  BreadcrumbItem,
   MessageBox
 } from 'element-ui'
 
@@ -32,4 +34,6 @@ Vue.use(DatePicker)
 Vue.use(TimePicker)
 Vue.use(Popover)
 Vue.use(Tooltip)
+Vue.use(Breadcrumb)
+Vue.use(BreadcrumbItem)
 Vue.prototype.$msgbox = MessageBox
