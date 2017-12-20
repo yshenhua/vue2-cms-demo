@@ -13,6 +13,7 @@
 - [element-ui](https://github.com/ElemeFE/element/tree/v2.0.7)^2.0.7
 - [vue-html5-editor](https://github.com/PeakTai/vue-html5-editor/tree/v1.1.1)^1.1.1
 - [axios](https://github.com/axios/axios/tree/v0.17.1)^0.17.1
+- [mockjs](https://github.com/nuysoft/Mock/tree/1.0.1-beta3)^1.0.1-beta3
 
 ## 下载运行
 

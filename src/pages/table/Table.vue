@@ -74,6 +74,11 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
+    this.$http.post('/api/tableData1', { code: 1 }).then(res => {
+      console.log(res)
+    })
   }
 }
 </script>

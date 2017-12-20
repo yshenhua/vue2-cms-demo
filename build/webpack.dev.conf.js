@@ -33,7 +33,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
-    }
+    },
+    before(app) { app.use('/api', require('../mock/mock.js')) }
   },
   plugins: [
     new webpack.DefinePlugin({
