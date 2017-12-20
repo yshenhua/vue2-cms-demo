@@ -57,6 +57,7 @@ export default {
           text-decoration: inherit;
           .iconfont {
             font-size: 32px;
+            outline-style: none;
           }
         }
       }
