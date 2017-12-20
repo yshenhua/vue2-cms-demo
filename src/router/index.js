@@ -22,6 +22,11 @@ const router = new Router({
       meta: { requiresAuth: true },
       children: [
         {
+          path: '/table',
+          name: '表格',
+          component: relsove => require(['@/pages/table/Table'], relsove)
+        },
+        {
           path: '/form',
           name: '表单',
           component: relsove => require(['@/pages/form/Form'], relsove)

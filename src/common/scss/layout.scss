@@ -36,6 +36,7 @@ html, body, #app, .layout {
       .demo-block {
         max-width: 100%;
         padding: 20px;
+        margin-bottom: 15px;
         border: 1px solid $border-color;
         @include border-shadow;
       }

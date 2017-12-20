@@ -11,6 +11,8 @@ import {
   Select,
   Option,
   Button,
+  Table,
+  TableColumn,
   DatePicker,
   TimePicker,
   Popover,
@@ -30,6 +32,8 @@ Vue.use(CheckboxGroup)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(Button)
+Vue.use(Table)
+Vue.use(TableColumn)
 Vue.use(DatePicker)
 Vue.use(TimePicker)
 Vue.use(Popover)
