@@ -11,7 +11,7 @@ router.post('/tableData1', (req, res) => {
         'id|+1': 1,
         'name': _ => Random.cname(),
         'sex|0-1': 1,
-        'tel|13500000000-17900000000': 15728042052,
+        'tel': /^1(3|4|5|7|8)\d{9}$/,
         'date': _ => Random.date()
       }
     ]

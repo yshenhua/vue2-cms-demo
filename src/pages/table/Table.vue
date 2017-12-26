@@ -39,6 +39,10 @@
         </el-table-column>
       </el-table>
     </div>
+    <div class="demo-block">
+      <el-table :data="tableData2" border>
+      </el-table>
+    </div>
   </section>
 </template>
 
@@ -46,38 +50,13 @@
 export default {
   data () {
     return {
-      tableData1: [
-        {
-          id: 1,
-          name: '孙松岛',
-          sex: 1,
-          tel: 15724320122,
-          date: '2016-05-02'
-        }, {
-          id: 2,
-          name: '王三三',
-          sex: 0,
-          tel: 15722312264,
-          date: '2016-05-04'
-        }, {
-          id: 3,
-          name: '申叔叔',
-          sex: 1,
-          tel: 15742103421,
-          date: '2016-05-01'
-        }, {
-          id: 4,
-          name: '史蒂夫',
-          sex: 1,
-          tel: 15728375564,
-          date: '2016-05-03'
-        }
-      ]
+      tableData1: [],
+      tableData2: []
     }
   },
   mounted () {
     this.$http.post('/api/tableData1', { code: 1 }).then(res => {
-      console.log(res)
+      this.tableData1 = res.data.rows
     })
   }
 }
