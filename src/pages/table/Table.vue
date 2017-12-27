@@ -40,7 +40,51 @@
       </el-table>
     </div>
     <div class="demo-block">
-      <el-table :data="tableData2" border>
+      <el-table :data="tableData2" border show-summary :summary-method="getSummaries">
+        <el-table-column
+          prop="order"
+          label="单号"
+          min-width="135">
+        </el-table-column>
+        <el-table-column
+          prop="goods"
+          label="商品"
+          min-width="200">
+        </el-table-column>
+        <el-table-column
+          prop="price"
+          label="单价"
+          min-width="120">
+          <template slot-scope="scope">
+            {{ scope.row.price.toFixed(2) + ' 元/件' }}
+          </template>
+        </el-table-column>
+        <el-table-column
+          prop="count"
+          label="数量"
+          min-width="120">
+          <template slot-scope="scope">
+            <!-- <input type="number" min="1" max="99" v-model="scope.row.count"> -->
+            <el-input-number v-model="scope.row.count" controls-position="right" size="small" :min="1" :max="99"></el-input-number>
+          </template>
+        </el-table-column>
+        <el-table-column
+          prop="total"
+          label="小计"
+          min-width="120">
+          <template slot-scope="scope">
+            {{ (scope.row.price * scope.row.count).toFixed(2) + ' 元' }}
+          </template>
+        </el-table-column>
+        <el-table-column
+          fixed="right"
+          align="center"
+          label="操作"
+          width="80">
+          <template slot-scope="scope">
+            <el-button type="text" size="small" @click="tableData2.splice(scope.$index, 1)">删除</el-button>
+          </template>
+        </el-table-column>
       </el-table>
     </div>
   </section>
@@ -58,6 +102,37 @@ export default {
     this.$http.post('/api/tableData1', { code: 1 }).then(res => {
       this.tableData1 = res.data.rows
     })
+    this.$http.post('/api/tableData2', { code: 1 }).then(res => {
+      this.tableData2 = res.data.rows
+    })
+  },
+  methods: {
+    getSummaries (param) {
+      const { columns, data } = param
+      const sums = []
+      columns.forEach((column, index) => {
+        if (index === 0) {
+          sums[index] = '总计'
+          return
+        }
+        if (index === columns.length - 2) {
+          sums[index] = 0
+          data.forEach(item => {
+            sums[index] += item.price * item.count
+          })
+          sums[index] = sums[index].toFixed(2) + ' 元'
+        } else {
+          sums[index] = ''
+        }
+      })
+      return sums
+    }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .el-input-number--small {
+    width: 85px;
+  }
+</style>

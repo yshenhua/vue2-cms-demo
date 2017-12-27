@@ -4,6 +4,7 @@ import {
   Form,
   FormItem,
   Input,
+  InputNumber,
   Radio,
   RadioGroup,
   Checkbox,
@@ -25,6 +26,7 @@ import {
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Input)
+Vue.use(InputNumber)
 Vue.use(Radio)
 Vue.use(RadioGroup)
 Vue.use(Checkbox)
