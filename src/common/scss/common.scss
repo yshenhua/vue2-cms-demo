@@ -1,0 +1,10 @@
+html, body {
+  color: $font-color;
+  background-color: $bg-color;
+}
+
+.clear::after {
+  content: '';
+  display: table;
+  clear: both;
+}

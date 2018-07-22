@@ -15,7 +15,7 @@
         <li class="account">账号 <strong>{{ $store.getters.getLoginInfo.account }}</strong></li>
         <li class="divider"></li>
         <li><a href="https://github.com/yshenhua/vue2-cms-demo" target="_blank">帮助</a></li>
-        <li><a href="javascript:0">设置</a></li>
+        <li><a href="https://github.com/yshenhua/vue2-cms-demo" target="_blank">设置</a></li>
         <li><a href="javascript:0" @click="signOut">退出</a></li>
       </ul>
     </el-popover>
@@ -36,65 +36,79 @@ export default {
 
 <style lang="scss" scoped>
   header.top {
-    @include no-user-select;
-    color: $bar-font-color;
-    > h1.title {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: $header-height;
+    color: $header-font-color;
+    background-color: $header-bg-color;
+    user-select: none;
+    h1.title {
       float: left;
+      margin: 0 10px;
+      line-height: $header-height;
+      display: flex;
       font-size: 21px;
-      font-weight: normal;
-      line-height: 24px;
-      margin: 18px 20px 17px;
+      font-weight: 400;
+      font-family: STKaiti;
+      text-shadow: 1px 1px 0 rgba(255, 255, 255, .2);
       cursor: default;
+      &::before {
+        content: '';
+        display: block;
+        width: $header-height;
+        height: $header-height;
+        background-image: url('./logo.png');
+        background-size: $header-height - 20 $header-height - 20;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
     span.btn {
       float: right;
-      // font-size: 16px;
-      // line-height: 18px;
-      $header-height: 60px;
-      $height: 21px;
+      $height: 24px;
       height: $height;
       margin: ($header-height - $height) / 2 20px ($header-height - $height) / 2 - 1;
       cursor: pointer;
       > .icon-user {
-        font-size: $height;
         vertical-align:middle;
+        font-size: 21px;
       }
       > .icon-downward {
-        font-size: 12px;
         vertical-align:middle;
+        font-size: 12px;
       }
     }
   }
   .user-info {
     box-sizing: border-box;
-    width: 180px;
     padding: 10px 0;
+    width: 180px;
     .list {
       @include no-list-style;
       > li {
-        background: #fff;
-        > a {
-          text-decoration: none;
+        a {
           display: block;
           padding: 4px 10px 4px 15px;
           overflow: hidden;
-          color: $font-color;
-          white-space: nowrap;
           text-overflow: ellipsis;
+          white-space: nowrap;
+          color: $font-color;
+          text-decoration: none;
           cursor: pointer;
         }
         &:hover {
           > a {
-            background: $hover-color;
             color: #fff;
+            background: $hover-color;
           }
         }
         &.account {
           padding: 0 10px 0 15px;
         }
         &.divider {
-          height: 1px;
           margin: 8px 1px;
+          height: 1px;
           background-color: $border-color;
         }
       }

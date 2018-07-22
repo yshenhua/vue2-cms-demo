@@ -6,7 +6,9 @@ var Random = Mock.Random
 router.post('/tableData1', (req, res) => {
   // console.log(req)
   const mockData = Mock.mock({
-    'rows|1-10': [
+    'total': 10,
+    'page': 1,
+    'rows|10': [
       {
         'id|+1': 1,
         'name': _ => Random.cname(),
@@ -22,7 +24,9 @@ router.post('/tableData1', (req, res) => {
 router.post('/tableData2', (req, res) => {
   // console.log(req)
   const mockData = Mock.mock({
-    'rows|1-10': [
+    'total': 27,
+    'page': 1,
+    'rows|27': [
       {
         'order|+1': 1514273771809,
         'goods': _ => Random.cword(3, 10),

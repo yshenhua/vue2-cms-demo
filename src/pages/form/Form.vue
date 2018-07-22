@@ -1,8 +1,6 @@
 <template>
   <section>
-    <h3>Form 表单</h3>
-    <p> Element 的 Form 表单包括各种表单项，比如输入框、选择器、开关、单选框、多选框等。其表单验证是引用的 async-validator 这个库。</p>
-    <div class="demo-block">
+    <block title="填写活动表单">
       <el-form
         :model="form"
         :rules="rules"
@@ -48,15 +46,22 @@
           </el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="submitForm">立 即 创 建</el-button>
-          <el-button @click="resetForm">重 置</el-button>
+          <el-button type="primary" @click="submitForm">立即创建</el-button>
+          <el-button @click="resetForm">重置</el-button>
         </el-form-item>
       </el-form>
-    </div>
+    </block>
+    <block title="Element 的 Form 表单">
+      <p> Element 的 Form 表单包括各种表单项，比如输入框、选择器、开关、单选框、多选框等。其表单验证是引用的 async-validator 这个库。</p>
+      <div class="demo-block">
+      </div>
+    </block>
   </section>
 </template>
 
 <script>
+import Block from '@/base/block/block'
+
 export default {
   data () {
     return {
@@ -101,7 +106,7 @@ export default {
         if (valid) {
           // console.log(this.form)
           this.$msgbox({
-            title: '获取到的数据',
+            title: '提交数据',
             message: this.form,
             confirmButtonText: '我知道了'
           })
@@ -113,6 +118,9 @@ export default {
     resetForm () {
       this.$refs.form.resetFields()
     }
+  },
+  components: {
+    Block
   }
 }
 </script>

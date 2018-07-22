@@ -7,8 +7,8 @@ import store from './store'
 import axios from 'axios'
 import 'normalize.css'
 import './common/scss/main.scss'
-import './configs/element-ui'
-import './configs/vue-html5-editor'
+import './common/configs/element-ui'
+import './common/configs/vue-html5-editor'
 
 Vue.prototype.$http = axios
 

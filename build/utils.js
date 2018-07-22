@@ -70,7 +70,8 @@ exports.cssLoaders = function (options) {
           // it need a absolute path
           resources: [
             resolveResouce('_colors.scss'),
-            resolveResouce('_mixins.scss')
+            resolveResouce('_mixins.scss'),
+            resolveResouce('_variables.scss')
           ]
         }
       }
